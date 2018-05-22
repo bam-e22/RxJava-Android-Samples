@@ -4,6 +4,7 @@ RxJava Android Samples
 ## Examples
 
 1. [Background work & concurrency (using Schedulers)](#1-background-work--concurrency-using-schedulers)
+2. [Accumulate calls (using buffer)](#2-accumulate-calls-using-buffer)
 
 ## Descrption
 
@@ -14,5 +15,17 @@ A common requirement is to offload lengthy heavy I/O intensive operations to a b
 The long operation is simulated by a blocking Thread.sleep call (since this is done in a background thread, our UI is never interrupted).
 
 To really see this example shine. Hit the button multiple times and see how the button click (which is a UI operation) is never blocked because the long operation only runs in the background.
+
+### 2. Accumulate calls (using buffer)
+
+This is a demo of how events can be accumulated using the "buffer" operation.
+
+A button is provided and we accumulate the number of clicks on that button, over a span of time and then spit out the final results.
+
+If you hit the button once, you'll get a message saying the button was hit once. If you hit it 5 times continuously within a span of 2 seconds, then you get a single log, saying you hit that button 5 times (vs 5 individual logs saying "Button hit once").
+
+Note:
+
+If you're looking for a more foolproof solution that accumulates "continuous" taps vs just the number of taps within a time span, look at the [EventBus Demo](https://github.com/kaushikgopal/Android-RxJava/blob/master/app/src/main/java/com/morihacky/android/rxjava/rxbus/RxBusDemo_Bottom3Fragment.java) where a combo of the `publish` and `buffer` operators is used. For a more detailed explanation, you can also have a look at this [blog post](http://blog.kaush.co/2015/01/05/debouncedbuffer-with-rxjava/).
 
 

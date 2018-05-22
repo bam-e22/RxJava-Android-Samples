@@ -9,7 +9,7 @@
 
     <TextView
         style="@style/Text"
-        android:text="@string/msg_demo_concurrency_schedulers" />
+        android:text="@string/msg_demo_buffer" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,16 +19,9 @@
         android:gravity="center_vertical">
 
         <Button
-            android:id="@+id/btn_start_operation"
+            android:id="@+id/btn_tap_me"
             style="@style/Button.Indigo"
-            android:text="@string/btn_start_long_operation" />
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:visibility="invisible" />
+            android:text="@string/btn_tap_me" />
 
     </LinearLayout>
 

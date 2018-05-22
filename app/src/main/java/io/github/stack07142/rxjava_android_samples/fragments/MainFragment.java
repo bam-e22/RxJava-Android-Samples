@@ -37,6 +37,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new ConcurrencyWithSchedulersDemoFragment());
     }
 
+    @OnClick(R.id.btn_demo_buffer)
+    void demoBuffer() {
+        clickedOn(new BufferDemoFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 
