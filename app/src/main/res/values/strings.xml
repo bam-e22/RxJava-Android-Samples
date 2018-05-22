@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RxJava-Android-Samples</string>
+
+    <!-- Background work & concurrency (using Schedulers) -->
+    <string name="btn_demo_schedulers">bg work (schedulers &amp; concurrency)</string>
+    <string name="msg_demo_concurrency_schedulers">This is a demo of how long running operations can be offloaded to a background thread. After the operation is done, we resume back on the main thread. All using RxJava! \n\n To really see this shine. Hit the button multiple times and see how the button click which is a ui operation is never blocked because the long operation only runs in the background</string>
+
+    <string name="start_long_operation">Start long operation</string>
+
 </resources>

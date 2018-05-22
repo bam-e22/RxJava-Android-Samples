@@ -8,4 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@color/colorPink400</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="Button.Indigo">
+        <item name="android:background">@color/colorIndigo400</item>
+    </style>
+
+    <style name="Text" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlueGrey500</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text.Debug">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
 </resources>
