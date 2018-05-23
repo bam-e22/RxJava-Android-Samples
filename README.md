@@ -5,6 +5,7 @@ RxJava Android Samples
 
 1. [Background work & concurrency (using Schedulers)](#1-background-work--concurrency-using-schedulers)
 2. [Accumulate calls (using buffer)](#2-accumulate-calls-using-buffer)
+3. [Instant/Auto searching text listeners (using debounce)](#3-instantauto-searching-text-listeners-using-debounce)
 
 ## Descrption
 
@@ -28,4 +29,11 @@ Note:
 
 If you're looking for a more foolproof solution that accumulates "continuous" taps vs just the number of taps within a time span, look at the [EventBus Demo](https://github.com/kaushikgopal/Android-RxJava/blob/master/app/src/main/java/com/morihacky/android/rxjava/rxbus/RxBusDemo_Bottom3Fragment.java) where a combo of the `publish` and `buffer` operators is used. For a more detailed explanation, you can also have a look at this [blog post](http://blog.kaush.co/2015/01/05/debouncedbuffer-with-rxjava/).
 
+### 3. Instant/Auto searching text listeners (using debounce)
+
+This is a demo of how events can be swallowed in a way that only the last one is respected. A typical example of this is instant search result boxes. As you type the word "Bruce Lee", you don't want to execute searches for B, Br, Bru, Bruce, Bruce, Bruce L ... etc. But rather intelligently wait for a couple of moments, make sure the user has finished typing the whole word, and then shoot out a single call for "Bruce Lee".
+
+As you type in the input box, it will not shoot out log messages at every single input character change, but rather only pick the lastly emitted event (i.e. input) and log that.
+
+This is the debounce/throttleWithTimeout method in RxJava.
 

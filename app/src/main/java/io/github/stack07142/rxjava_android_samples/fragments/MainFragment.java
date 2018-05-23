@@ -42,6 +42,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new BufferDemoFragment());
     }
 
+    @OnClick(R.id.btn_demo_debounce)
+    void demoDebounce() {
+        clickedOn(new DebounceSearchEmitterFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 

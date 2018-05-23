@@ -11,5 +11,10 @@
     <string name="msg_demo_buffer">This is a demo of how events can be accumulated using the "buffer" operation. Tap the button below repetitively and you will notice in the logs that button taps are collected over a span of 2s and printed below.</string>
     <string name="btn_tap_me">Tap me</string>
 
+    <!-- search text listener(debounce) -->
+    <string name="btn_demo_debounce">search text listener(debounce)</string>
+    <string name="msg_demo_debounce">As you type in the input box, it will not shoot out log messages at every single input character change, but rather only pick the last one.</string>
+    <string name="hint_search_text">Enter some search text</string>
+    <string name="btn_clear">Clear</string>
 
 </resources>
