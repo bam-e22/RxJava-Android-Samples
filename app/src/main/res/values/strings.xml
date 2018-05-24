@@ -17,4 +17,8 @@
     <string name="hint_search_text">Enter some search text</string>
     <string name="btn_clear">Clear</string>
 
+    <!-- Retrofit + RxJava -->
+    <string name="btn_demo_retrofit">Retrofit + RxJava</string>
+    <string name="msg_demo_retrofit">Retrofit from Square is a super easy networking helper library. It works really well with RxJava and these are examples taken from Jake Wharton\'s talk at Netflix (see README). Really the only interesting bits here are in the code and logs.</string>
+
 </resources>

@@ -22,4 +22,10 @@
         android:layout_marginTop="10dp"
         android:text="@string/btn_demo_debounce" />
 
+    <Button
+        android:id="@+id/btn_demo_retrofit"
+        style="@style/Button"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_demo_retrofit" />
+
 </LinearLayout>

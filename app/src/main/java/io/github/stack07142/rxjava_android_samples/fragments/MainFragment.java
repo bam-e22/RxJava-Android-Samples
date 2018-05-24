@@ -47,6 +47,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new DebounceSearchEmitterFragment());
     }
 
+    @OnClick(R.id.btn_demo_retrofit)
+    void demoRetrofitCalls() {
+        clickedOn(new RetrofitFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 
