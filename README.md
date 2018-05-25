@@ -6,6 +6,7 @@ RxJava Android Samples
 1. [Background work & concurrency (using Schedulers)](#1-background-work--concurrency-using-schedulers)
 2. [Accumulate calls (using buffer)](#2-accumulate-calls-using-buffer)
 3. [Instant/Auto searching text listeners (using debounce)](#3-instantauto-searching-text-listeners-using-debounce)
+4. [Networking with Retrofit & RxJava (using zip, flatmap)](#4-networking-with-retrofit--rxjava-using-zip-flatmap)
 
 ## Descrption
 
@@ -36,4 +37,10 @@ This is a demo of how events can be swallowed in a way that only the last one is
 As you type in the input box, it will not shoot out log messages at every single input character change, but rather only pick the lastly emitted event (i.e. input) and log that.
 
 This is the debounce/throttleWithTimeout method in RxJava.
+
+### 4. Networking with Retrofit & RxJava (using zip, flatmap)
+
+[Retrofit from Square](http://square.github.io/retrofit/) is an amazing library that helps with easy networking (even if you haven't made the jump to RxJava just yet, you really should check it out). It works even better with RxJava and these are examples hitting the GitHub API, taken straight up from the android demigod-developer Jake Wharton's talk at Netflix. You can [watch the talk](https://www.youtube.com/watch?v=aEuNBk1b5OE#t=2480) at this link. Incidentally, my motivation to use RxJava was from attending this talk at Netflix.
+
+(Note: you're most likely to hit the GitHub API quota pretty fast so send in an OAuth-token as a parameter if you want to keep running these examples often).
 

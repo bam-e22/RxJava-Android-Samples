@@ -20,5 +20,10 @@
     <!-- Retrofit + RxJava -->
     <string name="btn_demo_retrofit">Retrofit + RxJava</string>
     <string name="msg_demo_retrofit">Retrofit from Square is a super easy networking helper library. It works really well with RxJava and these are examples taken from Jake Wharton\'s talk at Netflix (see README). Really the only interesting bits here are in the code and logs.</string>
+    <string name="btn_log_contributors_of">get Contributors</string>
+    <string name="btn_log_contributors_with_email">with email info</string>
+    <string name="owner">owner</string>
+    <string name="repo_name">repo name</string>
+    <string name="github_oauth_token">6f734d4b93c38dcccbe40da3dee3482bb362811e</string>
 
 </resources>
