@@ -52,6 +52,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new RetrofitFragment());
     }
 
+    @OnClick(R.id.btn_demo_two_way_data_binding)
+    void demoTwoWayDataBinding() {
+        clickedOn(new TwoWayDataBindingFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 
