@@ -20,16 +20,16 @@ import io.reactivex.processors.PublishProcessor;
 public class TwoWayDataBindingFragment extends BaseFragment {
     private Unbinder unbinder;
     private Disposable disposable;
-    private PublishProcessor<Float> _resultEmitterSubject;
+    private PublishProcessor<Float> resultEmitterSubject;
 
     @BindView(R.id.et_num_1)
-    private EditText etNum1;
+    EditText etNum1;
 
     @BindView(R.id.et_num_2)
-    private EditText etNum2;
+    EditText etNum2;
 
     @BindView(R.id.tv_result)
-    private TextView tvResult;
+    TextView tvResult;
 
     @Nullable
     @Override
@@ -42,12 +42,20 @@ public class TwoWayDataBindingFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        resultEmitterSubject = PublishProcessor.create();
+
+        disposable = resultEmitterSubject.subscribe(
+                aFloat -> tvResult.setText(String.valueOf(aFloat))
+        );
+        onTextChanged();
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+        disposable.dispose();
     }
 
     @OnTextChanged({R.id.et_num_1, R.id.et_num_2})
@@ -69,5 +77,7 @@ public class TwoWayDataBindingFragment extends BaseFragment {
         } else {
             num2 = 0f;
         }
+
+        resultEmitterSubject.onNext(num1 + num2);
     }
 }
