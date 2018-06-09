@@ -24,10 +24,14 @@
     <string name="btn_log_contributors_with_email">with email info</string>
     <string name="owner">owner</string>
     <string name="repo_name">repo name</string>
-    <string name="github_oauth_token">b91a4296e719f6381f3f8600fa56ab7071d4536b</string>
+    <string name="github_oauth_token">075c3534672206ee6c140e2b9330aae688f7ac2d</string>
 
     <!-- Two-way data binding for TextViews (using PublishSubject) -->
     <string name="btn_demo_two_way_data_binding">Two-way data binding (PublishSubject)</string>
     <string name="msg_demo_two_way_data_binding">Watch how the result gloriously auto-updates <ba></ba>sed on your changing inputs. Using a technique like this, you could achieve the two-way binding in Angular Js, or more efficiently use a pattern like the Presentation View Model.</string>
+
+    <!-- Polling -->
+    <string name="btn_demo_polling">Polling with RxJava</string>
+    <string name="msg_demo_polling">Demo polling or making a call repeatedly with RxJava.\n\nSimple polling: Notice in the logs how a (simulated) network call is repeatedly made in the background.</string>
 
 </resources>

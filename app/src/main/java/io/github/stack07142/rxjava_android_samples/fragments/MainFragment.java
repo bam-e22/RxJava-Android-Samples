@@ -57,6 +57,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new TwoWayDataBindingFragment());
     }
 
+    @OnClick(R.id.btn_demo_polling)
+    void demoPolling() {
+        clickedOn(new PollingFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 
