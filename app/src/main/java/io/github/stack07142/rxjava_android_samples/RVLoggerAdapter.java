@@ -67,6 +67,11 @@ public class RVLoggerAdapter extends ListAdapter<String, RVLoggerAdapter.LoggerI
         rvLogger.scrollToPosition(getItemCount() - 1);
     }
 
+    public void clear() {
+        logList.clear();
+        submitList(logList);
+    }
+
     private String getThreadName() {
         String threadName = Thread.currentThread().getName();
         if (threadName.length() > 30) {

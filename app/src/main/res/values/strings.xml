@@ -32,6 +32,8 @@
 
     <!-- Polling -->
     <string name="btn_demo_polling">Polling with RxJava</string>
-    <string name="msg_demo_polling">Demo polling or making a call repeatedly with RxJava.\n\nSimple polling: Notice in the logs how a (simulated) network call is repeatedly made in the background.</string>
+    <string name="msg_demo_polling">Demo polling with RxJava.</string>
+    <string name="btn_add_value">Add</string>
+    <string name="btn_clear_value">Clear</string>
 
 </resources>
