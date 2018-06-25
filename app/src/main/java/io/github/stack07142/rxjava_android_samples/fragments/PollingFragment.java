@@ -18,7 +18,9 @@ import io.github.stack07142.rxjava_android_samples.R;
 import io.github.stack07142.rxjava_android_samples.RVDividerItemDecoration;
 import io.github.stack07142.rxjava_android_samples.RVLoggerAdapter;
 import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import timber.log.Timber;
 
 public class PollingFragment extends BaseFragment {
     private Unbinder unbinder;
@@ -51,19 +53,21 @@ public class PollingFragment extends BaseFragment {
         tvCurrentValue.setText("" + currentValue);
         tvMaxValue.setText("/ " + MAX_VALUE);
 
+        polling();
+    }
+
+    private void polling() {
+
         // Returns an Observable that emits a 0L after the initialDelay and ever increasing numbers after each period of time thereafter.
-        disposable = Observable.interval(2000L, 500L, TimeUnit.MILLISECONDS)
-                .takeWhile(sequence -> sequence * 500L < TIME_OUT && currentValue < MAX_VALUE)
-                .subscribe(
-                        sequence -> {
-                            rvLogger.post(() -> log("Executing pollinSoag task, now time= %d", sequence * 500L));
-                        },
-                        error -> {
-                            rvLogger.post(() -> log("onError(): %s", error.getMessage()));
-                        },
-                        () -> {
-                            rvLogger.post(() -> log("onComplete()"));
-                        });
+        disposable = Observable.interval(500L, TimeUnit.MILLISECONDS)
+                .doOnSubscribe(disposable -> rvLogger.post(() -> log("doOnSubscribe()")))
+                .doOnNext(sequence -> rvLogger.post(() -> log("Executing polling task, milliseconds= %d", sequence * 500L)))
+                .takeWhile(__ -> currentValue < MAX_VALUE)
+                .ignoreElements()
+                .timeout(10L, TimeUnit.SECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(() -> log("onComplete"),
+                        error -> log("onError()= %s", error.getMessage()));
     }
 
     @OnClick(R.id.btn_add_value)
@@ -78,6 +82,11 @@ public class PollingFragment extends BaseFragment {
     void onClickClearButton() {
         currentValue = 0;
         loggerAdapter.clear();
+
+        tvCurrentValue.setText(currentValue);
+        disposable.dispose();
+
+        polling();
     }
 
     @Override public void onDestroyView() {
