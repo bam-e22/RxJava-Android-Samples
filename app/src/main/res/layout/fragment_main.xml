@@ -51,10 +51,10 @@
             android:text="@string/btn_demo_rxbus" />
 
         <Button
-            android:id="@+id/btn_demo_form_validation_combinel"
-            style="@style/Button.Inactive"
+            android:id="@+id/btn_demo_form_validation_combinelatest"
+            style="@style/Button"
             android:layout_marginTop="10dp"
-            android:text="@string/btn_demo_form_validation_combinel" />
+            android:text="@string/btn_demo_form_validation_combinelatest" />
 
         <Button
             android:id="@+id/btn_demo_pseudo_cache"

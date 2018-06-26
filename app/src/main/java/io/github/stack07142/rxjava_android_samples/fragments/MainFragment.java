@@ -62,6 +62,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new PollingFragment());
     }
 
+    @OnClick(R.id.btn_demo_form_validation_combinelatest)
+    void demoFormValidation() {
+        clickedOn(new FormValidationCombineLatestFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 
