@@ -60,7 +60,9 @@ public class FormValidationCombineLatestFragment extends BaseFragment {
     @Override public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-        disposable.dispose();
+        if (disposable != null) {
+            disposable.dispose();
+        }
     }
 
     @OnClick(R.id.btn_submit)
