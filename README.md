@@ -9,7 +9,7 @@ RxJava Android Samples
 4. [Networking with Retrofit & RxJava (using zip, flatmap)](#4-networking-with-retrofit--rxjava-using-zip-flatmap)
 5. [Two-way data binding for TextViews (using PublishSubject)](#5-two-way-data-binding-for-textviews-using-publishsubject)
 6. [Simple and Advanced polling (using interval and repeatWhen)](#6-simple-and-advanced-polling-using-interval-and-repeatwhen)
-8. [Form validation (using combineLatest)](#7-form-validation-using-combinelatest)
+8. [Form validation (using combineLatest)](#8-form-validation-using-combinelatest)
 
 ## Descrption
 
