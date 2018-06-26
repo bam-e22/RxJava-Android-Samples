@@ -74,7 +74,7 @@ public class PollingFragment extends BaseFragment {
     void onClickAddButton() {
         if (currentValue < MAX_VALUE) {
             currentValue++;
-            tvCurrentValue.setText("" + currentValue);
+            tvCurrentValue.setText(String.valueOf(currentValue));
         }
     }
 
@@ -83,7 +83,7 @@ public class PollingFragment extends BaseFragment {
         currentValue = 0;
         loggerAdapter.clear();
 
-        tvCurrentValue.setText(currentValue);
+        tvCurrentValue.setText(String.valueOf(currentValue));
         disposable.dispose();
 
         polling();
