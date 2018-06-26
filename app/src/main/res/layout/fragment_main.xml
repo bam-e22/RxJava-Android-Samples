@@ -45,16 +45,22 @@
             android:text="@string/btn_demo_polling" />
 
         <Button
-            android:id="@+id/btn_demo_rxbus"
+            android:id="@+id/btn_demo_exponential_backoff"
             style="@style/Button.Inactive"
             android:layout_marginTop="10dp"
-            android:text="@string/btn_demo_rxbus" />
+            android:text="@string/btn_demo_exponential_backoff" />
 
         <Button
             android:id="@+id/btn_demo_form_validation_combinelatest"
             style="@style/Button"
             android:layout_marginTop="10dp"
             android:text="@string/btn_demo_form_validation_combinelatest" />
+
+        <Button
+            android:id="@+id/btn_demo_rxbus"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_rxbus" />
 
         <Button
             android:id="@+id/btn_demo_pseudo_cache"
@@ -73,12 +79,6 @@
             style="@style/Button.Inactive"
             android:layout_marginTop="10dp"
             android:text="@string/btn_demo_timeout" />
-
-        <Button
-            android:id="@+id/btn_demo_exponential_backoff"
-            style="@style/Button.Inactive"
-            android:layout_marginTop="10dp"
-            android:text="@string/btn_demo_exponential_backoff" />
 
         <Button
             android:id="@+id/btn_demo_rotation_persist"
