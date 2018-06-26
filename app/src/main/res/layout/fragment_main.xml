@@ -1,43 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_demo_schedulers"
-        style="@style/Button"
-        android:text="@string/btn_demo_schedulers" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <Button
-        android:id="@+id/btn_demo_buffer"
-        style="@style/Button"
-        android:layout_marginTop="10dp"
-        android:text="@string/btn_demo_buffer" />
+        <Button
+            android:id="@+id/btn_demo_schedulers"
+            style="@style/Button"
+            android:text="@string/btn_demo_schedulers" />
 
-    <Button
-        android:id="@+id/btn_demo_debounce"
-        style="@style/Button"
-        android:layout_marginTop="10dp"
-        android:text="@string/btn_demo_debounce" />
+        <Button
+            android:id="@+id/btn_demo_buffer"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_buffer" />
 
-    <Button
-        android:id="@+id/btn_demo_retrofit"
-        style="@style/Button"
-        android:layout_marginTop="10dp"
-        android:text="@string/btn_demo_retrofit" />
+        <Button
+            android:id="@+id/btn_demo_debounce"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_debounce" />
 
-    <Button
-        android:id="@+id/btn_demo_two_way_data_binding"
-        style="@style/Button"
-        android:layout_marginTop="10dp"
-        android:text="@string/btn_demo_two_way_data_binding" />
+        <Button
+            android:id="@+id/btn_demo_retrofit"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_retrofit" />
 
-    <Button
-        android:id="@+id/btn_demo_polling"
-        style="@style/Button"
-        android:layout_marginTop="10dp"
-        android:text="@string/btn_demo_polling" />
+        <Button
+            android:id="@+id/btn_demo_two_way_data_binding"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_two_way_data_binding" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_demo_polling"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_polling" />
+
+        <Button
+            android:id="@+id/btn_demo_rxbus"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_rxbus" />
+
+        <Button
+            android:id="@+id/btn_demo_form_validation_combinelatest"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_form_validation_combinelatest" />
+
+        <Button
+            android:id="@+id/btn_demo_pseudo_cache"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_pseudocache" />
+
+        <Button
+            android:id="@+id/btn_demo_timing"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_timing" />
+
+        <Button
+            android:id="@+id/btn_demo_timeout"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_timeout" />
+
+        <Button
+            android:id="@+id/btn_demo_exponential_backoff"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_exponential_backoff" />
+
+        <Button
+            android:id="@+id/btn_demo_rotation_persist"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_rotation_persist" />
+
+        <Button
+            android:id="@+id/btn_demo_volley"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_volley" />
+
+        <Button
+            android:id="@+id/btn_demo_pagination"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_pagination" />
+
+        <Button
+            android:id="@+id/btn_demo_networkDetector"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_networkDetector" />
+
+        <Button
+            android:id="@+id/btn_demo_using"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_using" />
+
+        <Button
+            android:id="@+id/btn_demo_multicastPlayground"
+            style="@style/Button.Inactive"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_multicastPlayground" />
+
+    </LinearLayout>
+
+</ScrollView>
