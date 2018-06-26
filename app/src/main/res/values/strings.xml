@@ -36,4 +36,40 @@
     <string name="btn_add_value">Add</string>
     <string name="btn_clear_value">Clear</string>
 
+    <!-- Event Bus with RxJava -->
+    <string name="btn_demo_rxbus">Event Bus with RxJava</string>
+
+    <!-- Form Validation with CombineLatest -->
+    <string name="btn_demo_form_validation_combinel">Form Validation with CombineLatest</string>
+
+    <!-- Pseudo cache using concat -->
+    <string name="btn_demo_pseudocache">Pseudo cache using concat</string>
+
+    <!-- Variations of timing/intervals/delays -->
+    <string name="btn_demo_timing">Variations of timing/intervals/delays</string>
+
+    <!-- Timeout long running jobs -->
+    <string name="btn_demo_timeout">Timeout long running jobs</string>
+
+    <!-- Exponential backoff -->
+    <string name="btn_demo_exponential_backoff">Exponential backoff</string>
+
+    <!-- Rotation persist -->
+    <string name="btn_demo_rotation_persist">Rotation persist</string>
+
+    <!-- Volley request demo -->
+    <string name="btn_demo_volley">Volley request demo</string>
+
+    <!-- Paging example -->
+    <string name="btn_demo_pagination">Paging example</string>
+
+    <!-- Network Detector (Subject) -->
+    <string name="btn_demo_networkDetector">Network Detector (Subject)</string>
+
+    <!-- Setup &amp; teardown resources (using) -->
+    <string name="btn_demo_using">Setup &amp; teardown resources (using)</string>
+
+    <!-- MultiConnect operator playground -->
+    <string name="btn_demo_multicastPlayground">MultiConnect operator playground</string>
+
 </resources>

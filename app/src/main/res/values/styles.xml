@@ -21,6 +21,12 @@
         <item name="android:background">@color/colorIndigo400</item>
     </style>
 
+    <style name="Button.Inactive">
+        <item name="android:state_enabled">false</item>
+        <item name="android:background">@color/colorGrey400</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
     <style name="Text" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

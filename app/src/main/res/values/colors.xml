@@ -8,4 +8,7 @@
     <color name="colorBlueGrey500">#607d8b</color>
     <color name="colorIndigo400">#5c6bc0</color>
 
+    <color name="colorBlack">#222222</color>
+    <color name="colorGrey400">#bdbdbd</color>
+
 </resources>
