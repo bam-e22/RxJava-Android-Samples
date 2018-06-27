@@ -57,16 +57,16 @@
             android:text="@string/btn_demo_form_validation_combinelatest" />
 
         <Button
+            android:id="@+id/btn_demo_pseudo_cache"
+            style="@style/Button"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_demo_pseudocache" />
+
+        <Button
             android:id="@+id/btn_demo_rxbus"
             style="@style/Button.Inactive"
             android:layout_marginTop="10dp"
             android:text="@string/btn_demo_rxbus" />
-
-        <Button
-            android:id="@+id/btn_demo_pseudo_cache"
-            style="@style/Button.Inactive"
-            android:layout_marginTop="10dp"
-            android:text="@string/btn_demo_pseudocache" />
 
         <Button
             android:id="@+id/btn_demo_timing"

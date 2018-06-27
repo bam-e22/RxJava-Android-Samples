@@ -18,6 +18,7 @@ import butterknife.Unbinder;
 import io.github.stack07142.rxjava_android_samples.R;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 import timber.log.Timber;
 
@@ -52,9 +53,9 @@ public class FormValidationCombineLatestFragment extends BaseFragment {
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        emailChangeFlowable = RxTextView.textChanges(etEmail).skip(1).toFlowable(BackpressureStrategy.LATEST);
-        passwordChangeFlowable = RxTextView.textChanges(etPassword).skip(1).toFlowable(BackpressureStrategy.LATEST);
-        numberChangeFlowable = RxTextView.textChanges(etNumber).skip(1).toFlowable(BackpressureStrategy.LATEST);
+        emailChangeFlowable = RxTextView.textChanges(etEmail).toFlowable(BackpressureStrategy.LATEST);
+        passwordChangeFlowable = RxTextView.textChanges(etPassword).toFlowable(BackpressureStrategy.LATEST);
+        numberChangeFlowable = RxTextView.textChanges(etNumber).toFlowable(BackpressureStrategy.LATEST);
     }
 
     @Override public void onDestroyView() {

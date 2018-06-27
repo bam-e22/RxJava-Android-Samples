@@ -67,6 +67,13 @@ public class RVLoggerAdapter extends ListAdapter<String, RVLoggerAdapter.LoggerI
         rvLogger.scrollToPosition(getItemCount() - 1);
     }
 
+    public void addAll(List<String> msgList) {
+        logList.addAll(msgList);
+
+        submitList(logList);
+        rvLogger.scrollToPosition(getItemCount() - 1);
+    }
+
     public void clear() {
         logList.clear();
         submitList(logList);

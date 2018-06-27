@@ -20,7 +20,6 @@ import io.github.stack07142.rxjava_android_samples.RVLoggerAdapter;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import timber.log.Timber;
 
 public class PollingFragment extends BaseFragment {
     private Unbinder unbinder;

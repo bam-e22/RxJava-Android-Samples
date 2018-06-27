@@ -67,6 +67,11 @@ public class MainFragment extends BaseFragment {
         clickedOn(new FormValidationCombineLatestFragment());
     }
 
+    @OnClick(R.id.btn_demo_pseudo_cache)
+    void demoPseudoCache() {
+        clickedOn(new PseudoCacheFragment());
+    }
+
     private void clickedOn(@NonNull Fragment fragment) {
         Timber.tag(TAG).d("clickedOn:: %s", fragment.getClass().getSimpleName());
 

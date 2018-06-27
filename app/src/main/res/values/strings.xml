@@ -24,7 +24,7 @@
     <string name="btn_log_contributors_with_email">with email info</string>
     <string name="owner">owner</string>
     <string name="repo_name">repo name</string>
-    <string name="github_oauth_token">075c3534672206ee6c140e2b9330aae688f7ac2d</string>
+    <string name="github_oauth_token">0256f8cf99e8fd9596bb23391e60aeefbe5c48e4</string>
 
     <!-- Two-way data binding for TextViews (using PublishSubject) -->
     <string name="btn_demo_two_way_data_binding">Two-way data binding (PublishSubject)</string>
@@ -43,11 +43,23 @@
     <string name="btn_demo_form_validation_combinelatest">Form Validation with CombineLatest</string>
     <string name="msg_demo_form_comb_latest">Monitor the state of multiple observables with the combineLatest operator. Only after all the 3 inputs contain valid entries will the submit button light up</string>
 
-    <!-- Event Bus with RxJava -->
-    <string name="btn_demo_rxbus">Event Bus with RxJava</string>
-
     <!-- Pseudo cache using concat -->
     <string name="btn_demo_pseudocache">Pseudo cache using concat</string>
+    <string name="concat">concat</string>
+    <string name="concat_eager">concatEager</string>
+    <string name="merge">merge</string>
+    <string name="merge_n_slower_disk">merge\n(slow disk)</string>
+    <string name="merge_n_optimized">merge-optimized</string>
+    <string name="merge_n_optimized_slow_disk">merge-optimized\n(slow disk)</string>
+    <string name="msg_pseudoCache_demoInfo_concat">Concat merges the results sequentially. But notice that the latter subscription starts only AFTER the first one completes. Some unnecessary waiting there.</string>
+    <string name="msg_pseudoCache_demoInfo_concatEager">Concat eager is cooler. Both subscriptions start at the same time (in parallel) but the order of emission is respected.</string>
+    <string name="msg_pseudoCache_demoInfo_merge">Merge presents the result as they come in which is great if the disk is *always* faster. If not, you have problems.</string>
+    <string name="msg_pseudoCache_demoInfo_mergeSlowDisk">Here\'s a fake example where the disk is made slower than the network call. You can see the results are whack.</string>
+    <string name="msg_pseudoCache_demoInfo_mergeOptimized">This is an optimized merge and probably want to use. Notice subscriptions happen immediately and network results are respected regardless of when they come in. So if the disk is slower, it is discarded.</string>
+    <string name="msg_pseudoCache_demoInfo_mergeOptimizedSlowDisk">Similar to optimized merge (same code). Notice though that if the disk is slower it\'s discarded in favor of the "fresh" network data which in this case happens to be faster.</string>
+
+    <!-- Event Bus with RxJava -->
+    <string name="btn_demo_rxbus">Event Bus with RxJava</string>
 
     <!-- Variations of timing/intervals/delays -->
     <string name="btn_demo_timing">Variations of timing/intervals/delays</string>
