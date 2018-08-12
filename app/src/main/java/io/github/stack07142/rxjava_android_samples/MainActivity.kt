@@ -18,9 +18,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (savedInstanceState == null) {
-            fragmentManager
+            supportFragmentManager
                     .beginTransaction()
                     .replace(android.R.id.content, MainFragment(), this.toString())
+                    .addToBackStack(MainFragment::class.java.simpleName)
                     .commit()
         }
 
@@ -39,7 +40,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        backButtonBehaviorSubject.onNext(System.currentTimeMillis())
+        if (supportFragmentManager.backStackEntryCount > 1) {
+            supportFragmentManager.popBackStack()
+        } else {
+            backButtonBehaviorSubject.onNext(System.currentTimeMillis())
+        }
     }
 
     override fun onDestroy() {

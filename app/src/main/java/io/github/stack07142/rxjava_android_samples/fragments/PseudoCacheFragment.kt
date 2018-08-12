@@ -22,14 +22,14 @@ class PseudoCacheFragment : BaseFragment() {
     private var contributionMap: MutableMap<String, Long> = mutableMapOf()
     private var githubService: GithubService? = null
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_pseudo_cache, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_pseudo_cache, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         setupLogger()
-        githubService = (activity.applicationContext as BaseApplication).githubService
+        githubService = (activity?.applicationContext as BaseApplication).githubService
     }
 
     private fun setupLogger() {

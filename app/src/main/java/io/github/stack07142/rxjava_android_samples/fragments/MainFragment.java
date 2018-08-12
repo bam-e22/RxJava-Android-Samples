@@ -1,9 +1,9 @@
 package io.github.stack07142.rxjava_android_samples.fragments;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,7 +77,7 @@ public class MainFragment extends BaseFragment {
 
         final String tag = fragment.getClass().toString();
         getActivity()
-                .getFragmentManager()
+                .getSupportFragmentManager()
                 .beginTransaction()
                 .addToBackStack(tag)
                 .replace(android.R.id.content, fragment, tag)
